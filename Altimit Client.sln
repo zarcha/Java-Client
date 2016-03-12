@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F0E502E4-5C0F-9923-9868-1C3773455196}") = "Altimit Client", "Assembly-CSharp.csproj", "{48CA2437-0C08-9B62-3706-2E22168CC824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48CA2437-0C08-9B62-3706-2E22168CC824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CA2437-0C08-9B62-3706-2E22168CC824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CA2437-0C08-9B62-3706-2E22168CC824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CA2437-0C08-9B62-3706-2E22168CC824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
