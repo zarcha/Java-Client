@@ -99,8 +99,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 0; i < val.Length; i++, position++) {
+            for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -115,8 +119,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 3; i > val.Length; i--, position++) {
+			for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -131,8 +139,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 0; i < val.Length; i++, position++) {
+            for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -147,8 +159,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 0; i < val.Length; i++, position++) {
+            for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -163,8 +179,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 0; i < val.Length; i++, position++) {
+            for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -179,8 +199,12 @@ namespace Altimit{
 			position++;
 
 			byte[] val = BitConverter.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(val);
+            }
 
-			for (int i = 0; i < val.Length; i++, position++) {
+            for (int i = 0; i < val.Length; i++, position++) {
 				buffer [position] = val [i];
 			}
 
@@ -196,7 +220,11 @@ namespace Altimit{
 			position++;
 		
 			byte[] size = BitConverter.GetBytes (value.Length);
-			byte[] byteStr = Encoding.UTF8.GetBytes (value);
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(size);
+            }
+            byte[] byteStr = Encoding.UTF8.GetBytes (value);
 
 			for(int i = 0; i < size.Length; i++, position++) {
 				buffer [position] = size [i];
