@@ -254,14 +254,19 @@ namespace Altimit{
 			position++;
 
 			byte[] size = BitConverter.GetBytes (uuid.Length);
-			byte[] byteStr = Encoding.ASCII.GetBytes (uuid);
+             if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(size);
+            }
+			byte[] byteStr = Encoding.UTF8.GetBytes (uuid);
 
 			for(int i = 0; i < size.Length; i++, position++) {
 				buffer [position] = size [i];
 			}
 
 			for(int i = 0; i < byteStr.Length; i++, position++) {
-				buffer [position] = byteStr [i];
+                //buffer [position] = byteStr [i];
+                buffer[position] = Encoding.UTF8.GetBytes(uuid.Substring(i))[0];
 			}
 
 			return buffer;

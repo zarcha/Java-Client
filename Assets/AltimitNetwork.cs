@@ -48,8 +48,10 @@ namespace Altimit {
 				Receive(client);
 				sendSocket = client;
 
-				Guid temp = new Guid ();
+				Guid temp = new Guid();
+                temp = Guid.NewGuid();
 				AltimitNetwork.Send ("SetClientUUID", temp);
+                AltimitNetwork.Send("test1", temp);
 
 			} catch (Exception e){
 				Debug.LogError (e.ToString ());
